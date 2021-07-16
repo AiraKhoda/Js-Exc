@@ -1,18 +1,19 @@
-// Pow recursive Method
-// function powMethod(number, pownum) {
+//Pow recursive Method
 
-//     if (pownum === 1) {
-//         return number;
-//     } else if (pownum === 0) {
-//         return 1;
-//     }
+function powMethod(number, pownum) {
 
-//     return number * powMethod(number, pownum - 1);
-// }
+    if (pownum === 1) {
+        return number;
+    } else if (pownum === 0) {
+        return 1;
+    }
+
+    return number * powMethod(number, pownum - 1);
+}
 
 
 
-// console.log(powMethod(2, 5));
+console.log(powMethod(2, 5));
 
 
 
@@ -27,7 +28,6 @@ function total(number) {
     let sumNumber = numbers.reduce((sum, num) => sum + num, 0);
 
     return sumNumber;
-}
-
+};
 
 console.log(total(7));
