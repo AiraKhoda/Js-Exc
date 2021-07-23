@@ -1,6 +1,6 @@
-//Pow recursive Method
+//Pow recursive fucnction
 
-function powMethod(number, pownum) {
+function pow(number, pownum) {
 
     if (pownum === 1) {
         return number;
@@ -8,7 +8,7 @@ function powMethod(number, pownum) {
         return 1;
     }
 
-    return number * powMethod(number, pownum - 1);
+    return number * powpow(number, pownum - 1);
 }
 
 
@@ -31,3 +31,13 @@ function total(number) {
 };
 
 console.log(total(7));
+
+
+
+
+// Reverse Number
+function reverseNum(n, str = String(n)) {
+    const thisDigit = str[str.length - 1];
+    const recursiveResult = str.length === 1 ? '' : reverseNum(str.slice(0, str.length - 1));
+    return Number(thisDigit + recursiveResult);
+}
